@@ -2,9 +2,23 @@
 
 Supply your own random seed to the clojure.core random functions.
 
+## Leiningen
+
+    [random-seed "1.0.0"]
+
 ## Usage
 
+    (ns example.core
+      (:require [random-seed.core :refer :all])
+      (:refer-clojure :exclude [rand rand-int rand-nth]))
 
+    (set-random-seed! 888)
+
+    (rand 5)
+
+    (rand-int 30)
+
+    (rand-nth [:a :b :c])
 
 ## License
 

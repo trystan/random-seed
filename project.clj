@@ -1,4 +1,4 @@
-(defproject random-seed "0.1.0-SNAPSHOT"
+(defproject random-seed "1.0.0"
   :description "Copies of rand, rand-int, and rand-nth, except you can specify the seed."
   :url "https://www.github.com/trystan/random-seed"
   :license {:name "Eclipse Public License"
