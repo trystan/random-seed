@@ -1,5 +1,5 @@
 (ns random-seed.core
-  (:refer-clojure :exclude [rand rand-int rand-nth]))
+  (:refer-clojure :exclude [rand rand-int rand-nth shuffle]))
 
 
 (defonce rng (new java.util.Random))
@@ -30,3 +30,11 @@
   specified in set-random-seed!."
   [coll]
   (nth coll (rand-int (count coll))))
+
+(defn shuffle
+  "Return a random permutation of coll. Works like clojure.core/shuffle
+  except it uses the seed specified in set-random-seed!."
+  [^java.util.Collection coll]
+  (let [al (java.util.ArrayList. coll)]
+    (java.util.Collections/shuffle al rng)
+    (clojure.lang.RT/vector (.toArray al))))
