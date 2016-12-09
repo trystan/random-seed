@@ -4,7 +4,7 @@ Supply your own random seed to the clojure.core random functions.
 
 ## Leiningen
 
-    [random-seed "1.0.0"]
+    [random-seed "1.0.1"]
 
 ## Usage
 
