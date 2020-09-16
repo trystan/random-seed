@@ -4,13 +4,13 @@ Supply your own random seed to the clojure.core random functions.
 
 ## Leiningen
 
-    [random-seed "1.0.0"]
+    [random-seed "1.0.1"]
 
 ## Usage
 
     (ns example.core
       (:require [random-seed.core :refer :all])
-      (:refer-clojure :exclude [rand rand-int rand-nth]))
+      (:refer-clojure :exclude [rand rand-int rand-nth shuffle]))
 
     (set-random-seed! 888)
 
@@ -19,6 +19,8 @@ Supply your own random seed to the clojure.core random functions.
     (rand-int 30)
 
     (rand-nth [:a :b :c])
+
+    (shuffle [:a :b :c])
 
 ## License
 
